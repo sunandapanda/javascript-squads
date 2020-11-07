@@ -1,0 +1,24 @@
+<html>
+<title>Random Number generation</title>
+
+<head>
+</head>
+
+<body>
+    <button onclick="genarateNumber()">Genarate Number</button>
+    <p id="add"></p>
+    <script>
+        function genarateNumber() {
+            var x = Math.random() * 10
+
+            console.log("The value for x is :" + x) //Concatenate  
+
+            var randomNumber = Math.floor(Math.random() * 10);
+            console.log("The value for randomNumber is:" + randomNumber)
+            document.getElementById("add").innerHTML = "The random number is:" + randomNumber;
+
+        }
+    </script>
+</body>
+
+</html>
