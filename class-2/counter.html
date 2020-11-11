@@ -5,12 +5,23 @@
 </head>
 
 <body>
+    <div class="main">
+
+        <h3>Click Counter</h3>
+        <button id="clickme" onclick="counter()">Click me: 0</button>
+
+        <!--        <h5>Good practice: no JavaScript code in HTML</h5>-->
+
+    </div>
     <script>
-        var x = 3;
-        var y = x++;
-        
-        console.log(y)
-        
+        var x = 0
+
+        function counter() {
+            console.log("the value of x:", x)
+            x++;
+            console.log("the value of x after increament:", x)
+            document.getElementById("clickme").innerHTML = "Click me:" + x
+        }
     </script>
 </body>
 
