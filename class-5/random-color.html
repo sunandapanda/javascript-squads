@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<title>Array example</title>
+
+<head>
+</head>
+
+<body>
+
+    <script>
+//        Uncaught TypeError: console.lo is not a function
+//    at genarateColor (random-color.html:19)
+//    at HTMLButtonElement.onclick (random-color.html:25)
+        function genarateColor() {
+            //#45B39D 
+            var symbol = "123456789ABCDEF"; // 15 alphanumerics 
+            // out of 15 , we will pick 6
+            // prefix with #
+            // once we build hex code assign to body style
+
+            for (var starter = 1; starter <= 6; starter++) {
+                var randomNumber = Math.floor(Math.random()*16);
+                console.log(""symbol[randomNumber])
+
+            }
+        }
+    </script>
+<!--    //create button-->
+    <button onclick="genarateColor()">Genarate Number</button>
+
+</body>
+
+</html>

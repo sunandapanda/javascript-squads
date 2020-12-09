@@ -8,18 +8,32 @@
     <div class="main">
 
         <h3>Click Counter</h3>
-        <button id="clickme" onclick="counter()">Click me: 0</button>
+        <button id="clickme1" onclick="counterUp()">Click me: 0</button>
+        <button id="clickme2" onclick="counterDown()">Click me: 0</button>
 
         <!--        <h5>Good practice: no JavaScript code in HTML</h5>-->
 
     </div>
     <script>
-        function counter() {
-            var x = 0
+        var x = 0
+        function counterUp() {
+            
             console.log("the value of x:", x)
             x++;
             console.log("the value of x after increament:", x)
-            document.getElementById("clickme").innerHTML = "Click me:" + x
+            document.getElementById("clickme1").innerHTML = "Click me:" + x
+        }
+        
+        function counterDown() {
+//            var x = 0
+            console.log("the value of x:", x)
+            x--;
+            console.log("the value of x after decrement:", x)
+            document.getElementById("clickme2").innerHTML = "Click me:" + x
+        }
+
+        function reset() {
+            var y = 0
         }
     </script>
 </body>
