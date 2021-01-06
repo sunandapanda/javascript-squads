@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <button onclick="print()" class="button">time</button>
+    <p id="time"></p>
+    <script>
+        function print() {
+            for (var starter = 0; starter < 10; starter++) {
+
+                if (starter === 5) {
+                    //break;// goes out of loop //for early exit we use break
+                    continue; // js doesn't execute anything below inside the               // loop and returns back to the loop with increment           // and check
+                    //return; // this is for function. goes out of the function. Nothing outside loop runs
+                }
+                console.log(starter)
+                console.log("Done!")
+
+            }
+            console.log("loop ended!")
+        }
+    </script>
+</body></html>

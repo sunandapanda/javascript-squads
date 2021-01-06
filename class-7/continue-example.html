@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>break exmple</title>
+    </head>
+    
+    <body>
+        <button onclick="breakExample()">time</button>
+    <script>
+        function breakExample(){
+            for(var starter = 0; starter <=10; starter++){
+                //starter++ is same starter = starter+1 or starter += 1
+                console.log(starter)
+                if(starter === 5){
+                    continue;// js doesn't execute anything below inside the               // loop and returns back to the loop with increment           // and condition check
+                }
+                console.log("Done")
+            }
+            console.log("End of for loop!")
+        }
+        
+    </script>
+    
+    </body>
+</html>
