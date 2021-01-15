@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>
+        Prime number
+    </title>
+</head>
+
+<body>
+
+    <script>
+        var number = prompt("Enter a positive number: ");
+
+        var isPrime = true;
+        //let's convert it to number data tye
+
+        number = parseInt(number)
+        console.log(typeof number)
+        //        number =
+        // check if number is equal to 1
+        if (number === 1) {
+            console.log("1 is neither prime nor composite number.");
+        } else if (number > 1) {
+            console.log(number)
+            for (var starter = 2; starter < number; starter++) {
+                if (number % starter == 0) {
+                    console.log("It is a not prime number")
+                    break;
+                }
+            }
+        } else {
+            console.log("NOT prime!!!!!!!!")
+        }
+
+    </script>
+
+</body>
+
+</html>
