@@ -7,29 +7,30 @@
 </head>
 
 <body>
+    <p id="display"></p>
 
     <script>
         var number = prompt("Enter a positive number: ");
-
-        var isPrime = true;
-        //let's convert it to number data tye
-
         number = parseInt(number)
         console.log(typeof number)
-        //        number =
-        // check if number is equal to 1
-        if (number === 1) {
-            console.log("1 is neither prime nor composite number.");
-        } else if (number > 1) {
-            console.log(number)
+        var message = isPrimeNumber(number);
+        document.getElementById("display").innerHTML = message;
+
+        function isPrimeNumber(number) {
+            if (number === 1) {
+                return "1 is neither prime nor composite number.";
+            }
+
+            if (number < 1) {
+                return "1 is neither prime nor composite number.";
+            }
+
             for (var starter = 2; starter < number; starter++) {
                 if (number % starter == 0) {
-                    console.log("It is a not prime number")
-                    break;
+                    return number + " is not prime number.";
                 }
             }
-        } else {
-            console.log("NOT prime!!!!!!!!")
+            return number + " is a prime number";
         }
 
     </script>
