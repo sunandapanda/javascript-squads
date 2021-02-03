@@ -1,12 +1,12 @@
 #### Prime number
 
 Example: 7
-7/1 = true count 1 factor
-7/2 == 0
-7/3
-7/4
-7/5
-7/6
+
+7/2 == false
+7/3 == false
+7/4 == false
+7/5 == false
+7/6 == false
 
 7/7 = true count 2 factor
 

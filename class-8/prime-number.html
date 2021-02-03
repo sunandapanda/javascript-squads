@@ -17,6 +17,7 @@
         document.getElementById("display").innerHTML = message;
 
         function isPrimeNumber(number) {
+            
             if (number === 1) {
                 return "1 is neither prime nor composite number.";
             }
@@ -25,8 +26,8 @@
                 return "1 is neither prime nor composite number.";
             }
 
-            for (var starter = 2; starter < number; starter++) {
-                if (number % starter == 0) {
+            for (var starter = 2; starter <= number-1; starter++) {
+                if (number % starter == 0) { //% - modulus operator
                     return number + " is not prime number.";
                 }
             }
