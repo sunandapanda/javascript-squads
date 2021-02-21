@@ -5,23 +5,39 @@
     
     <body>
         <button onclick="printObject()">time</button>
+        <p id="display"></p>
     <script>
+        //JSON - javascript object notation
+//        var person = {
+//            person1 : {
+//               firstName: "sunanda",
+//               lastName: "panda",
+//               occupation: "employee",
+//               id: 123, 
+//               hobbies: [ a, b, c]    
+//            }
+//            
+//        };
         
         var person = {
-            firstName: "sunanda",
-            lastName: "panda",
-            occupation: "employee",
-            id: 123
+               firstName: "sunanda",
+               lastName: "panda",
+               occupation: "employee",
+               id: 123, 
+               hobbies: [ "a", "b", "c"]    
         };
         function printObject(){
             
-            console.log(person.firstName);
-            console.log(person["firstName"]);
+            console.log(person.firstName); // dot operator
+            console.log(person["firstName"]); // using squre bracket
 
             console.log(person.lastName);
+            console.log(person.hobbies[3]);
+            return "The person's name is " + person.firstName
 
         }
-        
+        document.getElementById("display").innerHTML = printObject();
+//        printObject();
     </script>
     
     </body>
