@@ -4,7 +4,7 @@
     </head>
     
     <body>
-        <button onclick="printObject()">time</button>
+<!--        <button onclick="printPersonDetails()">time</button>-->
         <p id="display"></p>
     <script>
         //JSON - javascript object notation
@@ -26,7 +26,7 @@
                id: 123, 
                hobbies: [ "a", "b", "c"]    
         };
-        function printObject(){
+        function printPersonDetails(){
             
             console.log(person.firstName); // dot operator
             console.log(person["firstName"]); // using squre bracket
@@ -36,7 +36,7 @@
             return "The person's name is " + person.firstName
 
         }
-        document.getElementById("display").innerHTML = printObject();
+        document.getElementById("display").innerHTML = printPersonDetails();
 //        printObject();
     </script>
     
