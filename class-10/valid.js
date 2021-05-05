@@ -1,12 +1,13 @@
 function validate(){
     
     var firstName = document.getElementById("fname").value;
-    var regexPatt = /[^a-z]/i
-    var validFirstName = regexPatt.test(firstName);
+    var regexPattern = /[^a-z]/i
+    var validFirstName = regexPattern.test(firstName);
 
-    console.log(firstName);
-    if(!firstName){
+    console.log("---------," + firstName);
+    if(firstName.length <= 0){
       alert("Please enter first name")
+//        firstName.focus();
       return false;
     }
     
@@ -17,21 +18,33 @@ function validate(){
     
     var lastName = document.getElementById("lname").value;
     var regexPatt = /[^a-z]/i
-    var validFirstName = regexPatt.test(lastName);
-
-    lastName = regexPatt.test(lastName);
+    var validLastName = regexPatt.test(lastName);
 
     console.log(lastName);
-    if(!lastName){
+    if(lastName.length <= 0){
       alert("Please enter last name")
       return false;
     }
     
-    if(lastName){
+    if(validLastName){
+      alert("Enter a valid last name")
+      return false;
+    }
+    
+    var country = document.getElementById("country").value;
+    console.log(country)
+
+    if( country === "Choose a country"){
+      alert("Please enter last name")
+      return false;
+    }
+    
+    if(validLastName){
       alert("Enter a valid last name")
       return false;
     }
     alert("successfully registered")
-    document.form1.submit()
+    return false
+//    document.form1.submit()
     
 }

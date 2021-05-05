@@ -2,7 +2,7 @@
 
 <head>
     <title>js Form example</title>
-<!--    <link rel="stylesheet" href=valid.css type="text/css">-->
+    <!--    <link rel="stylesheet" href=valid.css type="text/css">-->
     <script src="valid.js"></script>
 </head>
 
@@ -10,7 +10,7 @@
     <div id="header" align="center">Registration Form</div>
     <div class="form-style">
         <h2>All fields are mandatory</h2>
-        <form name="form1" method="post" action="#" onsubmit="return validate();" autocomplete="off">
+        <form name="form1" method="" action="#" onsubmit="return validate();" autocomplete="off">
             <table align="center" width=400 border="1">
                 <tr>
                     <td>First name</td>
@@ -31,35 +31,47 @@
                 <tr>
                     <td>Gender</td>
                     <td>
-<!--                        <span id="gen">-->
+                        <!--                        <span id="gen">-->
                         <input type="radio" name="gender" value="Male" id="male">Male
-                        <input type="radio" name="gender" value="Male" id="male">FeMale
-<!--                        </span>-->
+                        <input type="radio" name="gender" value="Female" id="female">Female
+                        <!--                        </span>-->
                     </td>
                 </tr>
-                
-<!--
                 <tr>
-                    <td>Gender</td>
+                    <td>Address</td>
                     <td>
-                        <span id="gen">
-                        <input type="radio" name="gender" value="Male" id="male">Male
-                        </span>
+                        <textarea name="address" class="textarea-field"></textarea>
                     </td>
                 </tr>
--->
-                <tr><td></td><td><input type="submit" name="submit" value="submit">
-                <input type="reset" name="reset" value="reset"></td></tr>
+                <tr>
+                    <td>Country</td>
+                    <td>
+                        <div class="input-group">
+                            <select id="country">
+                                <option value="">Choose a country</option>
+                                    <option value="India">India</option>
+                                    <option value="China">China</option>
+                                    <option value="England">England</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
 
-                
-<!--                Add email and select option for county-->
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="submit" value="submit">
+                        <input type="reset" name="reset" value="reset"></td>
+                </tr>
+
+
+                <!--                Add email and select option for county-->
             </table>
 
         </form>
 
     </div>
 
-<!--<script src="valid.js"></script>-->
+    <!--<script src="valid.js"></script>-->
 </body>
 
 </html>
