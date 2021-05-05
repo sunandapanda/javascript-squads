@@ -1,7 +1,7 @@
 function validate(){
     
     var firstName = document.getElementById("fname").value;
-    var regexPattern = /[^a-z]/i
+    var regexPattern = /[a-z]/i
     var validFirstName = regexPattern.test(firstName);
 
     console.log("---------," + firstName);
