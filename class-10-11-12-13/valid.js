@@ -11,23 +11,39 @@ function validate(){
       return false;
     }
     
-    if(validFirstName){
+    if(!validFirstName){
       alert("Enter a valid first name")
       return false;
     }
     
     var lastName = document.getElementById("lname").value;
-    var regexPatt = /[^a-z]/i
-    var validLastName = regexPatt.test(lastName);
+    var validLastName = regexPattern.test(lastName);
 
-    console.log(lastName);
+    console.log("---------," + lastName);
     if(lastName.length <= 0){
       alert("Please enter last name")
       return false;
     }
     
-    if(validLastName){
+    if(!validLastName){
       alert("Enter a valid last name")
+      return false;
+    }
+    
+    // email
+    
+    var email = document.getElementById("email").value;
+    var regexPatternForEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    var validEmail = regexPatternForEmail.test(email);
+
+    if(email.length <= 0){
+      alert("Please enter email")
+//        firstName.focus();
+      return false;
+    }
+    
+    if(!validEmail){
+      alert("Enter a valid email")
       return false;
     }
     
@@ -35,14 +51,10 @@ function validate(){
     console.log(country)
 
     if( country === "Choose a country"){
-      alert("Please enter last name")
+      alert("Please enter country")
       return false;
     }
     
-    if(validLastName){
-      alert("Enter a valid last name")
-      return false;
-    }
     alert("successfully registered")
     return false
 //    document.form1.submit()
